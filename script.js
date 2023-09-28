@@ -25,14 +25,32 @@ document.body.appendChild(z)
 
 
 // Challenge 2.2: Add id "main" using setAttribute method to the newly created <div> element. Print the id "main" using the getAttribute method.
+var n = document.createElement("div");
+n.textContent = "Division2";
+n.setAttribute("id", "main");
+document.body.appendChild(n);
+var d = n.getAttribute("id");
 
 // Challenge 2.3: Add the text content "This is a division" inside the div with id "main" using innerHTML.
+var m= document.getElementById("main");
+m.innerHTML = "This is a division";
 
 // Challenge 2.4: Create a new element <p> and append it to the div with id "main" and append the string "This is a paragraph tag" inside the <p> tag using the innerText.
 // Hint: First access the id "main" using document.getElementById and then append the new element <p> tag.
+var p = document.createElement("p");
+p.innerText = "This is a paragraph tag";
+var main= document.getElementById("main");
+main.appendChild(p);
 
 // Challenge 2.5: Remove the class "footer" using classList and add the new class "dom-method-footer". If your footer text color changes to aqua blue you are right.
+var ele = document.querySelector(".footer");
+ele.classList.remove("footer");
+ele.classList.add("dom-method-footer");
 
 // Challenge 2.6: Set the color of the <p> text as red using DOM manipulation.
+var para = document.querySelector("p");
+para.style.color = "red";
 
 // Challenge 2.7: Remove the div with a class "copyright" using the removeAttribute method.
+var copyright = document.querySelector(".copyright");
+copyright.removeAttribute("class");
